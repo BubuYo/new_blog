@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Bubu
+title: 卜将就
 subtitle:
 description: 北邮学子，专注Python爬虫爬坑中，坐标帝都。
 author: Bubu 
-language: zh-Hans
+language: zh-CN
 timezone: Asia/Shanghai
 
 # URL
@@ -42,6 +42,10 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace:
+#search
+search:
+  path: search.xml
+  field: post
 
 # Category & Tag
 default_category: uncategorized
@@ -63,9 +67,17 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next
+theme: material
 avatar: /images/1.jpg
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: git
+  type: ftpsync
+  host: "96.44.177.58"
+  user: "bububupt"
+  pass: "ljj2010"
+  remote: /public_html
+  port:
+  ignore:
+  connections:
+  verbose:

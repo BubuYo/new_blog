@@ -4,9 +4,40 @@
   
     
     <entry>
-      <title><![CDATA[Install DCOS On Centos]]></title>
-      <url>http://yoursite.com/2016/12/06/Install-DCOS-On-Centos/</url>
-      <content type="html"><![CDATA[<h2 id="Ubuntu14-4-通过FPDF-生成中文PDF"><a href="#Ubuntu14-4-通过FPDF-生成中文PDF" class="headerlink" title="Ubuntu14.4 通过FPDF 生成中文PDF"></a>Ubuntu14.4 通过FPDF 生成中文PDF</h2><p>#安装FPDF</p>
+      <title><![CDATA[通过FPDF生成中文PDF]]></title>
+      <url>http://www.bububupt.com/2016/12/06/%E9%80%9A%E8%BF%87FPDF%E7%94%9F%E6%88%90%E4%B8%AD%E6%96%87PDF/</url>
+      <content type="html"><![CDATA[<h1 id="Ubuntu14-4-通过FPDF-生成中文PDF"><a href="#Ubuntu14-4-通过FPDF-生成中文PDF" class="headerlink" title="Ubuntu14.4 通过FPDF 生成中文PDF"></a>Ubuntu14.4 通过FPDF 生成中文PDF</h1><h2 id="安装FPDF"><a href="#安装FPDF" class="headerlink" title="安装FPDF"></a>安装FPDF</h2><ol>
+<li><p>Please login as “root” or equivalent for installing.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">apt-get install php-fpdf</div></pre></td></tr></table></figure>
+</li>
+<li><p>If the installation is successful, there will be a file “fpdf.php” in the following folder.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ls -l /usr/share/php/fpdf</div></pre></td></tr></table></figure>
+</li>
+<li><p>Please create a symbolic link is directed at each site are available on your web server with the following way.e.g</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s /usr/share/php/fpdf /var/www/fpdf</div></pre></td></tr></table></figure>
+</li>
+<li><p>Reload your web server.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/init.d/apache2 force-reload</div></pre></td></tr></table></figure>
+</li>
+<li><p>Make sure the PHP commands on the web page associated with the conversion to PDF function like this.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line"> require(&apos;fpdf/fpdf.php&apos;);</div><div class="line">?&gt;</div><div class="line"> tfpdf/font/unifont/DejaVuSansCondensed.ttf&apos;;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<h2 id="下载FPDF中文包（需要php安装mbstring扩展）"><a href="#下载FPDF中文包（需要php安装mbstring扩展）" class="headerlink" title="下载FPDF中文包（需要php安装mbstring扩展）"></a>下载FPDF中文包（需要php安装mbstring扩展）</h2><ol>
+<li>安装mastering两种方法：<br><a href="http://www.jb51.net/article/45925.htm" target="_blank" rel="external">http://www.jb51.net/article/45925.htm</a></li>
+<li>FPDF中文包下载<br> <a href="https://yunpan.cn/cYWEtSBNYI2Yg" target="_blank" rel="external">https://yunpan.cn/cYWEtSBNYI2Yg</a> （提取码：9e8c）</li>
+<li><p>复制tfpdf.php 并删除</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cp /home/jingning/tfpdf/tfpdf.php /var/www/fpdf/</div><div class="line">root@ubuntu:/var/www/fpdf/font/unifont# rm simfang.mtx.php</div></pre></td></tr></table></figure>
+</li>
+<li><p>在/var/www/html下新建ex.php</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">&lt;?php</div><div class="line">	 require(&apos;fpdf/tfpdf.php&apos;);</div><div class="line">	 $pdf = new tFPDF();</div><div class="line">	 $pdf-&gt;AddPage();</div><div class="line">	 </div><div class="line">	 // Add a Unicode font (uses UTF-8)</div><div class="line">	 $pdf-&gt;AddFont(&apos;DejaVu&apos;,&apos;&apos;,&apos;simfang.ttf&apos;,true);</div><div class="line">	 $pdf-&gt;SetFont(&apos;DejaVu&apos;,&apos;&apos;,14);</div><div class="line">	 $pdf-&gt;Write(5,&apos;数据库客户端版本&apos;);</div><div class="line">	 // Load a UTF-8 string from a file and print it</div><div class="line">	 //$txt = file_get_contents(&apos;HelloWorld.txt&apos;);</div><div class="line">	 //$pdf-&gt;Write(8,$txt);</div><div class="line">	 </div><div class="line">	 $pdf-&gt;Output();</div><div class="line">?&gt;</div></pre></td></tr></table></figure>
+</li>
+<li><p>复制字体</p>
+  <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">cd /var/www/fpdf/font</div><div class="line">mkdir unifont</div><div class="line">cp /home/jingning/tfpdf/font/unifont/ /var/www/fpdf/font/unifont/</div><div class="line">chmod 777 -R  unifont</div></pre></td></tr></table></figure>
+</li>
+<li><p>浏览器中输入 <a href="localhost/ex.php">localhost/ex.php</a>即可。</p>
+</li>
+</ol>
 ]]></content>
     </entry>
     

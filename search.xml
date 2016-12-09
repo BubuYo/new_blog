@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title><![CDATA[Mysql远程连接配置]]></title>
+      <url>http://www.bububupt.com/2016/12/08/Mysql%E8%BF%9C%E7%A8%8B%E8%BF%9E%E6%8E%A5%E9%85%8D%E7%BD%AE/</url>
+      <content type="html"><![CDATA[<h1 id="Mysql-设置远程访问"><a href="#Mysql-设置远程访问" class="headerlink" title="Mysql 设置远程访问"></a>Mysql 设置远程访问</h1><h2 id="登录mysql"><a href="#登录mysql" class="headerlink" title="登录mysql"></a>登录mysql</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql -u root -p</div></pre></td></tr></table></figure>
+<h2 id="Mysql内配置"><a href="#Mysql内配置" class="headerlink" title="Mysql内配置"></a>Mysql内配置</h2><p>将代码中username，ip address和password替换为个人信息<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">use mysql</div><div class="line">SELECT User, Password, Host FROM user;</div><div class="line">grant all on *.* to username@‘ip address’ identifified by ‘password’</div></pre></td></tr></table></figure></p>
+<h2 id="Mysql配置文件修改"><a href="#Mysql配置文件修改" class="headerlink" title="Mysql配置文件修改"></a>Mysql配置文件修改</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /etc/mysql</div><div class="line">sudo vim my.cnf</div></pre></td></tr></table></figure>
+<p>把其中的<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">blind-address = 127.0.0.1</div></pre></td></tr></table></figure></p>
+<p>通过前面加一个‘#’来注释掉</p>
+<h2 id="最后，重启Mysql"><a href="#最后，重启Mysql" class="headerlink" title="最后，重启Mysql"></a>最后，重启Mysql</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo /etc/init.d/mysql restart</div></pre></td></tr></table></figure>
+<p>Done!</p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[通过FPDF生成中文PDF]]></title>
       <url>http://www.bububupt.com/2016/12/06/%E9%80%9A%E8%BF%87FPDF%E7%94%9F%E6%88%90%E4%B8%AD%E6%96%87PDF/</url>
       <content type="html"><![CDATA[<h1 id="Ubuntu14-4-通过FPDF-生成中文PDF"><a href="#Ubuntu14-4-通过FPDF-生成中文PDF" class="headerlink" title="Ubuntu14.4 通过FPDF 生成中文PDF"></a>Ubuntu14.4 通过FPDF 生成中文PDF</h1><h2 id="安装FPDF"><a href="#安装FPDF" class="headerlink" title="安装FPDF"></a>安装FPDF</h2><ol>

@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        标签: linux | 卜将就
+        Ansible python api远程部署 | 卜将就
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.bububupt.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="标签: linux | 卜将就">
+    <meta property="og:title" content="Ansible python api远程部署 | 卜将就">
     <meta property="og:description" content="北邮学子，专注Python爬虫爬坑中，坐标帝都。">
     
      <!--[if lte IE 9]>
@@ -194,471 +194,229 @@
                 </button>
 				
 				
-                <!-- Index Module -->
-<div class="material-index mdl-grid">
-	
-		<!-- Paradox Header -->
-		<!-- Daily pic -->
-<div class="mdl-card daily-pic mdl-cell mdl-cell--8-col index-top-block">
-    
-    <!-- Pic & Slogan -->
-    <div class="mdl-card__media mdl-color-text--grey-50" style="background-image:url(/img/daily_pic.png)">
-        <p class="index-top-block-slogan"><a href="#">Hi, nice to meet you</a></p>
-    </div>
+                
+	<!-- Back Button -->
+<!--
+	<div class="material-back" id="backhome-div" tabindex="0">
+		<a class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon" href="#" onclick="window.history.back();return false;" target="_self" role="button" data-upgraded=",MaterialButton,MaterialRipple">
+			<i class="material-icons" role="presentation">arrow_back</i>
+			<span class="mdl-button__ripple-container">
+				<span class="mdl-ripple"></span>
+			</span>
+		</a>
+	</div>			
+-->
+	<!-- Left aligned menu below button -->
+	<button id="post-toc-trigger-btn"
+			class="mdl-button mdl-js-button mdl-button--icon">
+	  <i class="material-icons">format_list_numbered</i>
+	</button>
 
-    <!-- Avatar & Name -->
-    <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
-        <!-- Author Avatar -->
-        <div id="author-avatar">
-            <img src="/images/1.jpg" width="32px" height="32px" alt="avatar">
-        </div>
-        <div>
-            <strong>Bubu</strong>
-        </div>
-    </div>
-</div>
-
-		<!-- Blog info -->
-<div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop index-top-block">
-	
-    <!-- Search -->
-	
-
-
-
-
-	<!-- Local -->
-	<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable" method="post" action="">
-		<label id="search-label" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent mdl-shadow--4dp" for="search">
-			<i class="material-icons mdl-color-text--white" role="presentation">search</i>
-		</label>
-
-		<form id="search-form" class="mdl-textfield__expandable-holder">
-			<input type="text" id="search" class="form-control mdl-textfield__input search-input" name="q" results="0" placeholder=""/>
-			<label id="search-form-label" class="mdl-textfield__label" for="search"></label>
+	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
+		for="post-toc-trigger-btn">
 			
-		</form>
-	</div>
-
-	<div id="local-search-result"></div>
-
-
-    <!-- LOGO -->
-    <div class="something-else-logo mdl-color--white mdl-color-text--grey-600">
-        <a href="http://www.bububupt.com">
-            <img src="/img/logo.png" alt="logo" />
-        </a>
-    </div>
-
-    <!-- Infomation -->
-    <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
-        <!-- Blog Title -->
-        <div>
-            <strong>卜将就</strong>
-        </div>
-        <div class="section-spacer"></div>
-        
-        <!-- Pages -->
-        <button id="show-pages-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">view_carousel</i>
-            <span class="visuallyhidden">Pages</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="show-pages-button">
-            
-                <a class="index_share-link" href="/about" title="about">
-                    <l class="mdl-menu__item mdl-js-ripple-effect"i>
-                        about
-                    </li>
-                </a>
-            
-        </ul>
-        
-        <!-- Menu -->
-        <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
-            <i class="material-icons" role="presentation">more_vert</i>
-            <span class="visuallyhidden">show menu</span>
-        </button>
-        <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
-            
-            <!-- All Site UV -->
-            <a class="index_share-link" href="#">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                    <span id="busuanzi_container_site_uv">
-                        <span id="busuanzi_value_site_uv"></span>&nbsp;浏览量
-                    </span>
-                </li>
-            </a>
-            
-            <a class="index_share-link" href="#">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                    文章 RSS
-                </li>
-            </a>
-            <a class="index_share-link" href="https://twitter.com/intent/tweet?text=卜将就&url=http://www.bububupt.com/&via=Bubu" target="_blank">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                    分享到 Twitter
-                </li>
-            </a>
-            <a class="index_share-link" href="https://plus.google.com/share?url=http://www.bububupt.com/" target="_blank">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                    分享到 Google+
-                </li>
-            </a>
-            <a class="index_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=卜将就&url=http://www.bububupt.com/&pic=&searchPic=false&style=simple" target="_blank">
-                <li class="mdl-menu__item mdl-js-ripple-effect">
-                    分享到微博
-                </li>
-            </a>
-        </ul>
-    </div>
-</div>
-
-	
-    
-    
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#目标：MasterA机器通过python脚本-控制ansible-playbook-实现远程部署"><span class="post-toc-number">1.</span> <span class="post-toc-text">目标：MasterA机器通过python脚本 控制ansible playbook 实现远程部署</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在MasterA机器上："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">在MasterA机器上：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ls-yml"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">ls.yml</span></a></li></ol></li></ol>
 		
-			<!-- Paradox Thumbnail -->
-        	<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    
-    <!-- Post Thumbnail -->
+<!--			<li class="mdl-menu__item">Some Action</li>-->
+	</ul>
+
+
+<!-- Layouts -->
+
+    <!-- Post Module -->
+    <div class="material-post_container">
+		
+        <div class="material-post mdl-grid">
+            <div class="mdl-card mdl-shadow--4dp mdl-cell mdl-cell--12-col">
+
+                <!-- Post Header(Thumbnail & Title) -->
+                
+	<!-- Paradox Post Header -->
 	
 		
 			<!-- Random Thumbnail -->
 			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-		
-	
-				
-		<!-- Post Title -->
-		<p class="article-headline-p"><a href="/2016/12/11/Ansible-部署操作：上传-运行/">Ansible 部署操作：上传+运行</a></p>
-	</div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-          &#x4E0A;&#x4F20;&#xFF1A;
-&#x628A;&#x9700;&#x8981;&#x4ECE; MasterA &...
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/12/11/Ansible-部署操作：上传-运行/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/images/1.jpg" width="44px" height="44px" alt="Bubu's avatar">
-            </div>
-            <div>
-                <strong>Bubu</strong>
-                <span>12月 11, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-            
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="2016/12/11/Ansible-部署操作：上传-运行/" data-count-type="comments"></span>
-                </span>
-            
-            
-            <!-- Post Views -->
-            <span class="post_entry-views">
-                
-            </span>
-        </div>
-    </div>
-            
-</div>
-
-		
-		
-    
-		
-			<!-- Paradox Thumbnail -->
-        	<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    
-    <!-- Post Thumbnail -->
-	
-		
-			<!-- Random Thumbnail -->
-			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-		
-	
-				
-		<!-- Post Title -->
-		<p class="article-headline-p"><a href="/2016/12/11/Install-Elasticsearch-2-3-1-Cluster-on-Ubuntu-14-04/">Install Elasticsearch 2.3.1 Cluster on Ubuntu 14.04</a></p>
-	</div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-          
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/12/11/Install-Elasticsearch-2-3-1-Cluster-on-Ubuntu-14-04/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/images/1.jpg" width="44px" height="44px" alt="Bubu's avatar">
-            </div>
-            <div>
-                <strong>Bubu</strong>
-                <span>12月 11, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-            
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="2016/12/11/Install-Elasticsearch-2-3-1-Cluster-on-Ubuntu-14-04/" data-count-type="comments"></span>
-                </span>
-            
-            
-            <!-- Post Views -->
-            <span class="post_entry-views">
-                
-            </span>
-        </div>
-    </div>
-            
-</div>
-
-		
-		
-    
-		
-			<!-- Paradox Thumbnail -->
-        	<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    
-    <!-- Post Thumbnail -->
-	
-		
-			<!-- Random Thumbnail -->
-			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-		
-	
-				
-		<!-- Post Title -->
-		<p class="article-headline-p"><a href="/2016/12/11/Crontab定时/">Crontab定时</a></p>
-	</div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-          
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/12/11/Crontab定时/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/images/1.jpg" width="44px" height="44px" alt="Bubu's avatar">
-            </div>
-            <div>
-                <strong>Bubu</strong>
-                <span>12月 11, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-            
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="2016/12/11/Crontab定时/" data-count-type="comments"></span>
-                </span>
-            
-            
-            <!-- Post Views -->
-            <span class="post_entry-views">
-                
-            </span>
-        </div>
-    </div>
-            
-</div>
-
-		
-		
-    
-		
-			<!-- Paradox Thumbnail -->
-        	<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    
-    <!-- Post Thumbnail -->
-	
-		
-			<!-- Random Thumbnail -->
-			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-		
-	
-				
-		<!-- Post Title -->
-		<p class="article-headline-p"><a href="/2016/12/10/Install-DCOS-on-CentOS/">Install DCOS on CentOS</a></p>
-	</div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-          
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/12/10/Install-DCOS-on-CentOS/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/images/1.jpg" width="44px" height="44px" alt="Bubu's avatar">
-            </div>
-            <div>
-                <strong>Bubu</strong>
-                <span>12月 10, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-            
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="2016/12/10/Install-DCOS-on-CentOS/" data-count-type="comments"></span>
-                </span>
-            
-            
-            <!-- Post Views -->
-            <span class="post_entry-views">
-                
-            </span>
-        </div>
-    </div>
-            
-</div>
-
-		
-		
-    
-		
-			<!-- Paradox Thumbnail -->
-        	<div class="post_entry-module mdl-card mdl-cell mdl-cell--12-col fade out">
-    
-    <!-- Post Thumbnail -->
-	
-		
-			<!-- Random Thumbnail -->
-			<div class="post_thumbnail-random mdl-card__media mdl-color-text--grey-50">
-		
-	
-				
-		<!-- Post Title -->
-		<p class="article-headline-p"><a href="/2016/12/08/Mysql远程连接配置/">Mysql远程连接配置</a></p>
-	</div>
-
-    <!-- Post Excerpt -->
-    <div class="mdl-color-text--grey-600 mdl-card__supporting-text post_entry-content">
-        
-          
-        
-        &nbsp;&nbsp;&nbsp;
-        <span>
-            <a href="/2016/12/08/Mysql远程连接配置/" target="_self">继续阅读</a>
-        </span>
-    </div>
-    <!-- Post_entry Info-->
-    <div id="post_entry-info">
-        <div id="post_entry-left-info" class="mdl-card__supporting-text meta mdl-color-text--grey-600 ">
-            <!-- Author Avatar -->
-            <div id="author-avatar">
-                <img src="/images/1.jpg" width="44px" height="44px" alt="Bubu's avatar">
-            </div>
-            <div>
-                <strong>Bubu</strong>
-                <span>12月 08, 2016</span>
-            </div>
-        </div>
-        <div id="post_entry-right-info">
-            <!-- Category -->
-            <span class="post_entry-category">
-                
-            </span>
-            
-            
-                <!-- Comment Number -->
-                &nbsp;|&nbsp;
-                <span class="post_entry-comment" >
-                        <span class="ds-thread-count" data-thread-key="2016/12/08/Mysql远程连接配置/" data-count-type="comments"></span>
-                </span>
-            
-            
-            <!-- Post Views -->
-            <span class="post_entry-views">
-                
-            </span>
-        </div>
-    </div>
-            
-</div>
-
-		
-		
-    
-    
-	
-		<script>
+				<script>
     
     var randomNum;
+    randomNum = Math.floor(Math.random() * 5 + 1);
     
-    var locatePost = $(".something-else").next();
-    for(var i=0; i < 10; i++){
-        
-        randomNum = Math.floor(Math.random() * 5 + 1);
-        
-        locatePost.children(".post_thumbnail-random").attr('id', 'random_thumbnail-'+randomNum);
-        locatePost.children(".post_thumbnail-random").css('background-image', 'url(' + '/img/random/' + randomNum + '.png' + ')')
-        
-        locatePost = locatePost.next();
-    }
+    $(".post_thumbnail-random").css('background-image', 'url(' + '/img/random/' + randomNum + '.png' + ')');
     
 </script>
 
+		
+	
+        <p class="article-headline-p">
+            Ansible python api远程部署
+        </p>
+    </div>
+
 	
 
+				
+				
+					<!-- Paradox Post Info -->
+					<div class="mdl-color-text--grey-700 mdl-card__supporting-text meta">
+    
+    <!-- Author Avatar -->
+    <div id="author-avatar">
+        <img src="/images/1.jpg" width="44px" height="44px" alt="Author Avatar"/>
+    </div>
+    <!-- Author Name & Date -->
+    <div>
+        <strong>Bubu</strong>
+        <span>12月 10, 2016</span>
+    </div>
+    
+    <div class="section-spacer"></div>
+	
+    <!-- Favorite -->
+<!--
+    <button id="article-functions-like-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon btn-like">
+        <i class="material-icons" role="presentation">favorite</i>
+        <span class="visuallyhidden">favorites</span>
+    </button>
+-->
+    
+    <!-- Tags (bookmark) -->
+    <button id="article-functions-viewtags-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+        <i class="material-icons" role="presentation">bookmark</i>
+        <span class="visuallyhidden">bookmark</span>
+    </button>
+    <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
+        <li class="mdl-menu__item">
+        <a class="post_tag-link" href="/tags/Python/">Python</a>
+    </ul>
+    
+    <!-- Share -->
+    <button id="article-fuctions-share-button" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+    <i class="material-icons" role="presentation">share</i>
+    <span class="visuallyhidden">share</span>
+</button>
+<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-fuctions-share-button">
+    
+    
+    
+    
+    <!-- Busuanzi Views -->
+    <a class="post_share-link" href="#">
+        <li class="mdl-menu__item">
+            <span id="busuanzi_container_page_pv">
+                <span id="busuanzi_value_page_pv"></span>&nbsp;浏览量
+            </span>
+        </li>
+    </a>
+    
+    
+    <!-- Share Twitter -->
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Ansible python api远程部署&url=http://www.bububupt.com//2016/12/10/Ansible-python-api远程部署/index.html&via=Bubu" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Twitter
+        </li>
+    </a>
+    
+    <!-- Share Google+ -->
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://www.bububupt.com//2016/12/10/Ansible-python-api远程部署/index.html" target="_blank">
+        <li class="mdl-menu__item">
+            分享到 Google+
+        </li>
+    </a>
+    
+    <!-- Share Weibo -->
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Ansible python api远程部署&url=http://www.bububupt.com//2016/12/10/Ansible-python-api远程部署/index.html&pic=&searchPic=false&style=simple" target="_blank">
+        <li class="mdl-menu__item">
+            分享到微博
+        </li>
+    </a>
+</ul>
 </div>
+				
+
+                <!-- Post Content -->
+                <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
+	
+		<h1 id="&#x76EE;&#x6807;&#xFF1A;MasterA&#x673A;&#x5668;&#x901A;&#x8FC7;python&#x811A;&#x672C;-&#x63A7;&#x5236;ansible-playbook-&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x90E8;&#x7F72;"><a href="#&#x76EE;&#x6807;&#xFF1A;MasterA&#x673A;&#x5668;&#x901A;&#x8FC7;python&#x811A;&#x672C;-&#x63A7;&#x5236;ansible-playbook-&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x90E8;&#x7F72;" class="headerlink" title="&#x76EE;&#x6807;&#xFF1A;MasterA&#x673A;&#x5668;&#x901A;&#x8FC7;python&#x811A;&#x672C; &#x63A7;&#x5236;ansible playbook &#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x90E8;&#x7F72;"></a>&#x76EE;&#x6807;&#xFF1A;MasterA&#x673A;&#x5668;&#x901A;&#x8FC7;python&#x811A;&#x672C; &#x63A7;&#x5236;ansible playbook &#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x90E8;&#x7F72;</h1><h2 id="&#x5728;MasterA&#x673A;&#x5668;&#x4E0A;&#xFF1A;"><a href="#&#x5728;MasterA&#x673A;&#x5668;&#x4E0A;&#xFF1A;" class="headerlink" title="&#x5728;MasterA&#x673A;&#x5668;&#x4E0A;&#xFF1A;"></a>&#x5728;MasterA&#x673A;&#x5668;&#x4E0A;&#xFF1A;</h2><p>&#x521B;&#x5EFA;python&#x7A0B;&#x5E8F;&#xFF1A; run_playbook.py</p>
+<p>&#x5B9E;&#x73B0;&#x529F;&#x80FD;&#xFF1A;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x672C;&#x673A;&#x4E0A;&#x6307;&#x5B9A;&#x7684;playbook<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python</div><div class="line">import os</div><div class="line">import sys</div><div class="line">from collections import namedtuple</div><div class="line">from ansible.parsing.dataloader import DataLoader</div><div class="line">from ansible.vars import VariableManager</div><div class="line">from ansible.inventory import Inventory</div><div class="line">from ansible.executor.playbook_executor import PlaybookExecutor</div><div class="line"></div><div class="line">variable_manager = VariableManager()</div><div class="line">loader = DataLoader()</div><div class="line"></div><div class="line">inventory = Inventory(loader=loader, variable_manager=variable_manager,  host_list=&apos;/etc/ansible/hosts&apos;)</div><div class="line">playbook_path = &apos;/home/bubu/ls.yml&apos;</div><div class="line"></div><div class="line">if not os.path.exists(playbook_path):</div><div class="line">    print &apos;[INFO] The playbook does not exist&apos;</div><div class="line">    sys.exit()</div><div class="line"></div><div class="line">Options = namedtuple(&apos;Options&apos;, [&apos;listtags&apos;, &apos;listtasks&apos;, &apos;listhosts&apos;, &apos;syntax&apos;, &apos;connection&apos;,&apos;module_path&apos;, &apos;forks&apos;, &apos;private_key_file&apos;, &apos;ssh_common_args&apos;, &apos;ssh_extra_args&apos;, &apos;sftp_extra_args&apos;, &apos;scp_extra_args&apos;, &apos;become&apos;, &apos;become_method&apos;, &apos;become_user&apos;, &apos;verbosity&apos;, &apos;check&apos;])</div><div class="line">options = Options(listtags=False, listtasks=False, listhosts=False, syntax=False, connection=&apos;ssh&apos;, module_path=None, forks=100, private_key_file=None, ssh_common_args=None, ssh_extra_args=None, sftp_extra_args=None, scp_extra_args=None, become=True, become_method=None, become_user=&apos;root&apos;, verbosity=None, check=False)</div><div class="line"></div><div class="line">variable_manager.extra_vars = {&apos;hosts&apos;: &apos;dbserver&apos;} # This can accomodate various other command line arguments.`</div><div class="line"></div><div class="line">passwords = {}</div><div class="line"></div><div class="line">pbex = PlaybookExecutor(playbooks=[playbook_path], inventory=inventory, variable_manager=variable_manager, loader=loader, options=options, passwords=passwords)</div><div class="line"></div><div class="line">results = pbex.run()</div></pre></td></tr></table></figure></p>
+<p>&#x7A0B;&#x5E8F;&#x4E2D;&#x6253;&#x5F00;&#x7684;playbook&#x4F4D;&#x7F6E;&#x662F;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">playbook_path = &apos;/home/bubu/ls.yml&apos;</div></pre></td></tr></table></figure></p>
+<p>&#x6240;&#x4EE5;&#x5728;&#x90A3;&#x91CC;&#x5E94;&#x6709;&#x5BF9;&#x5E94;&#x7684;playbook: ls.yml.</p>
+<h2 id="ls-yml"><a href="#ls-yml" class="headerlink" title="ls.yml"></a>ls.yml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">- hosts: dbservers</div><div class="line">  sudo: yes</div><div class="line"></div><div class="line">  tasks:</div><div class="line">  - name: Copy file</div><div class="line">    copy: src=/home/bubu/mk_txt.py dest=/home/bubu/mk_txt.py mode=755</div><div class="line">  - name: Execute script</div><div class="line">    command: /home/bubu/mk_txt.py</div></pre></td></tr></table></figure>
+<p>&#x8BE5;playbook&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5F88;&#x7B80;&#x5355;&#x7684;&#x529F;&#x80FD;&#xFF1A;&#x4E0A;&#x4F20;mk_txt.py&#x5230;&#x8FDC;&#x7A0B;&#x673A;&#x5668;SlaveB&#x7684;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x5B83;&#x3002;</p>
+<p>&#x5982;&#x679C;copy&#x65F6; &#x6CA1;&#x6709;&#x628A;&#x6743;&#x9650;&#x63D0;&#x9AD8;&#x5230;755 &#x7B2C;&#x4E8C;&#x6B65;&#x7684;&#x6267;&#x884C;&#x5C31;&#x4F1A;&#x51FA;&#x9519;&#x3002;&#x56E0;&#x4E3A;&#x8981;&#x751F;&#x6210;&#x7684;TXT&#x5728; /root &#x76EE;&#x5F55;&#x4E0B;&#x3002;&#xFF08;&#x53EF;&#x80FD;&#x662F;sudo&#xFF1A;yes &#x5BFC;&#x81F4;&#x5B83;&#x5B9A;&#x4F4D;&#x5230;&#x4E86;&#x9ED8;&#x8BA4;&#x7684; /root &#x4E0B;</p>
+<p>&#x4E0A;&#x4F20;&#x7684;mk_txt.py&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;2.txt&#x3002;</p>
+<p>mk_txt.py&#x5185;&#x5BB9;&#x662F;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python</div><div class="line">import os</div><div class="line"></div><div class="line">file = open(&apos;2.txt&apos;,&apos;w&apos;)</div><div class="line"></div><div class="line">file.write(&quot;\nbubu&quot;)</div></pre></td></tr></table></figure></p>
+<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x542F;&#x52A8;ansible&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ./hacking/env-setup</div></pre></td></tr></table></figure></p>
+<p>&#x63A5;&#x7740;&#x8FD0;&#x884C; run_playbook.py &#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5B8C;&#x6210;&#x3002;</p>
+<p>&#x6B64;&#x65F6;&#x53BB;SlaveB &#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5DF2;&#x4E0A;&#x4F20;&#x7684;python&#x7A0B;&#x5E8F; mk_txt.py &#x548C;&#x6267;&#x884C;&#x540E;&#x7684; 2.txt&#xFF1A;</p>
+<p>Ps:&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x751F;&#x6210;&#x4E0A;&#x9762;playbook&#x7684;python&#x7A0B;&#x5E8F;&#xFF1A;wyml.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import yaml</div><div class="line"></div><div class="line">file = open(&apos;lss.yml&apos;, &apos;w&apos;)</div><div class="line">#as ymlfile:</div><div class="line">#   cfg = yaml.load(ymlfile)</div><div class="line">#hosts = {&apos;hosts&apos;: &apos;dbservers&apos;, &apos;tasks&apos;: [{&apos;copy&apos;: &apos;src=/home/bubu/mk_txt.py dest=/home/bubu/mk_txt.py mode=755&apos;, &apos;name&apos;: &apos;Copy file&apos;}</div><div class="line">file.write(&quot;---\n- hosts: dbservers\n  sudo: yes\n\n  tasks:\n  - name: Copy file\n    copy: src=/home/bubu/mk_txt.py dest=/home/bubu/mk_txt.py mode=755\n  - name:Execute script\n    command:/home/bubu/mk_txt.py&quot;)</div></pre></td></tr></table></figure></p>
+
+	
+	
+	
+	
+</div>
+				
+				
+
+                <!-- Post Comments -->
+                
+    <!-- 使用多说评论 -->
+    <link rel="stylesheet" href="/css/duoshuo.min.css">
+<style>
+    #ds-thread #ds-reset .ds-post-button{
+        background-color: #0097A7 !important;
+    }
+    #ds-wrapper #ds-reset .ds-icons-32{
+        background-color: #0097A7 !important;
+    }
+    #ds-reset .ds-highlight {
+        color: #0097A7 !important;
+    }
+</style>
+<div id="comments">
+    <!-- 多说评论框 start -->
+        <div class="ds-thread" 
+            data-thread-key="2016/12/10/Ansible-python-api远程部署/" 
+            data-url="http://www.bububupt.com/2016/12/10/Ansible-python-api远程部署/"
+            data-title="Ansible python api远程部署"></div>
+    <!-- 多说评论框 end -->
+</div>
+
+
+
+            </div>
+
+            <!-- Post Prev & Next Nav -->
+            <nav class="material-nav mdl-color-text--grey-50 mdl-cell mdl-cell--12-col">
+    
+    <!-- Prev Nav -->
+    
+        <a href="/2016/12/10/Solr-4-6-配置联想词功能/" id="post_nav-newer" class="prev-content">
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_back</i>
+            </button>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            新篇
+        </a>
+    
+
+    <!-- Section Spacer -->
+    <div class="section-spacer"></div>
+
+    <!-- Next Nav -->
+    
+        <a href="/2016/12/10/Install-DCOS-on-CentOS/" id="post_nav-older" class="next-content">
+            旧篇
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                <i class="material-icons">arrow_forward</i>
+            </button>
+        </a>
+    
+</nav>
+        </div>
+    </div>
 
 				
 				

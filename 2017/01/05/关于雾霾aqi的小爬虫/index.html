@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        Solr 4.6 配置联想词功能 | 卜将就
+        关于雾霾aqi的小爬虫 | 卜将就
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.bububupt.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Solr 4.6 配置联想词功能 | 卜将就">
+    <meta property="og:title" content="关于雾霾aqi的小爬虫 | 卜将就">
     <meta property="og:description" content="北邮学子，专注Python爬虫爬坑中，坐标帝都。">
     
      <!--[if lte IE 9]>
@@ -215,7 +215,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Solr-Core增加某字段联想词功能："><span class="post-toc-number">1.</span> <span class="post-toc-text">Solr Core增加某字段联想词功能：</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#修改两个配置文件：solrconfig-xml-schema-xml"><span class="post-toc-number">1.1.</span> <span class="post-toc-text">修改两个配置文件：solrconfig.xml    schema.xml</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#添加："><span class="post-toc-number">1.1.1.</span> <span class="post-toc-text">添加：</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#然后在schema-xml-按位置依次添加："><span class="post-toc-number">1.1.2.</span> <span class="post-toc-text">然后在schema.xml 按位置依次添加：</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#差不多就是这些了。保存配置并重启solr"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">差不多就是这些了。保存配置并重启solr</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#来到solr网页后，使用词典前-先执行build指令："><span class="post-toc-number">1.3.</span> <span class="post-toc-text">来到solr网页后，使用词典前 先执行build指令：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#现在终于可以使用这个组件了。使用词组的建议方式，假设查询语句为："><span class="post-toc-number">1.4.</span> <span class="post-toc-text">现在终于可以使用这个组件了。使用词组的建议方式，假设查询语句为：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在-solr-4-6-1-credit-solr-company-conf下新建一个dict-txt-一行行写词组填充这个txt之后，就可以看到联想结果了，如图："><span class="post-toc-number">1.5.</span> <span class="post-toc-text">在/solr-4.6.1/credit/solr/company/conf下新建一个dict.txt 一行行写词组填充这个txt之后，就可以看到联想结果了，如图：</span></a></li></ol></li></ol>
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#爬取北京的AQI"><span class="post-toc-number">1.</span> <span class="post-toc-text">爬取北京的AQI</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#爬取全国空气质量图"><span class="post-toc-number">2.</span> <span class="post-toc-text">爬取全国空气质量图</span></a></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -248,7 +248,7 @@
 		
 	
         <p class="article-headline-p">
-            Solr 4.6 配置联想词功能
+            关于雾霾aqi的小爬虫
         </p>
     </div>
 
@@ -266,7 +266,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Bubu</strong>
-        <span>12月 10, 2016</span>
+        <span>1月 05, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -286,7 +286,7 @@
     </button>
     <ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect" for="article-functions-viewtags-button">
         <li class="mdl-menu__item">
-        <a class="post_tag-link" href="/tags/Solr/">Solr</a>
+        <a class="post_tag-link" href="/tags/crawler/">crawler</a>
     </ul>
     
     <!-- Share -->
@@ -310,21 +310,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Solr 4.6 配置联想词功能&url=http://www.bububupt.com//2016/12/10/Solr-4-6-配置联想词功能/index.html&via=Bubu" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=关于雾霾aqi的小爬虫&url=http://www.bububupt.com//2017/01/05/关于雾霾aqi的小爬虫/index.html&via=Bubu" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://www.bububupt.com//2016/12/10/Solr-4-6-配置联想词功能/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://www.bububupt.com//2017/01/05/关于雾霾aqi的小爬虫/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Solr 4.6 配置联想词功能&url=http://www.bububupt.com//2016/12/10/Solr-4-6-配置联想词功能/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=关于雾霾aqi的小爬虫&url=http://www.bububupt.com//2017/01/05/关于雾霾aqi的小爬虫/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -336,21 +336,14 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<h1 id="Solr-Core&#x589E;&#x52A0;&#x67D0;&#x5B57;&#x6BB5;&#x8054;&#x60F3;&#x8BCD;&#x529F;&#x80FD;&#xFF1A;"><a href="#Solr-Core&#x589E;&#x52A0;&#x67D0;&#x5B57;&#x6BB5;&#x8054;&#x60F3;&#x8BCD;&#x529F;&#x80FD;&#xFF1A;" class="headerlink" title="Solr Core&#x589E;&#x52A0;&#x67D0;&#x5B57;&#x6BB5;&#x8054;&#x60F3;&#x8BCD;&#x529F;&#x80FD;&#xFF1A;"></a>Solr Core&#x589E;&#x52A0;&#x67D0;&#x5B57;&#x6BB5;&#x8054;&#x60F3;&#x8BCD;&#x529F;&#x80FD;&#xFF1A;</h1><p>&#x67D0;&#x5929;&#x89C9;&#x5F97;&#x7F51;&#x7AD9;&#x7684;&#x641C;&#x7D22;&#x6846;&#x53EF;&#x4EE5;&#x4E3A;&#x4E86;&#x66F4;&#x65B9;&#x4FBF;&#x7528;&#x6237;&#x8F93;&#x5165;&#xFF0C;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x8054;&#x60F3;&#x8BCD;&#x529F;&#x80FD;&#xFF0C;&#x4EE5;&#x4E0B;&#x5C31;&#x662F;solr 4.6&#x7248;&#x672C;&#x7684;&#x8BBE;&#x7F6E;&#x8FC7;&#x7A0B;&#xFF1A;</p>
-<h2 id="&#x4FEE;&#x6539;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;solrconfig-xml-schema-xml"><a href="#&#x4FEE;&#x6539;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;solrconfig-xml-schema-xml" class="headerlink" title="&#x4FEE;&#x6539;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;solrconfig.xml    schema.xml"></a>&#x4FEE;&#x6539;&#x4E24;&#x4E2A;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#xFF1A;solrconfig.xml    schema.xml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cd /solr-4.6.1/credit/solr/company/conf</div></pre></td></tr></table></figure>
-<p>&#x5728;&#x5F53;&#x524D;&#x8DEF;&#x5F84;&#x4E0B;&#x7684; solrconfig.xml &#x627E;&#x5BF9;&#x5730;&#x65B9;&#x4E4B;&#x540E; </p>
-<h3 id="&#x6DFB;&#x52A0;&#xFF1A;"><a href="#&#x6DFB;&#x52A0;&#xFF1A;" class="headerlink" title="&#x6DFB;&#x52A0;&#xFF1A;"></a>&#x6DFB;&#x52A0;&#xFF1A;</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div></pre></td><td class="code"><pre><div class="line">&lt;searchComponent class=&quot;solr.SpellCheckComponent&quot; name=&quot;suggest&quot;&gt;</div><div class="line">        &lt;str name=&quot;queryAnalyzerFieldType&quot;&gt;text_spell&lt;/str&gt;</div><div class="line">        &lt;lst name=&quot;spellchecker&quot;&gt;</div><div class="line">            &lt;str name=&quot;name&quot;&gt;suggest&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;classname&quot;&gt;org.apache.solr.spelling.suggest.Suggester&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;lookupImpl&quot;&gt;org.apache.solr.spelling.suggest.tst.TSTLookup&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;field&quot;&gt;suggestion&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;sourceLocation&quot;&gt;dict.txt&lt;/str&gt;</div><div class="line">            &lt;!-- the indexed field to derive suggestions from --&gt;</div><div class="line">            &lt;float name=&quot;threshold&quot;&gt;0.0001&lt;/float&gt;</div><div class="line">            &lt;str name=&quot;spellcheckIndexDir&quot;&gt;spellchecker&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;comparatorClass&quot;&gt;freq&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;buildOnOptimize&quot;&gt;true&lt;/str&gt;</div><div class="line"></div><div class="line">            &lt;!--&lt;str name=&quot;buildOnCommit&quot;&gt;true&lt;/str&gt;--&gt;</div><div class="line">        &lt;/lst&gt;</div><div class="line">    &lt;/searchComponent&gt;</div><div class="line">    &lt;requestHandler class=&quot;org.apache.solr.handler.component.SearchHandler&quot;</div><div class="line">                    name=&quot;/suggest&quot;&gt;</div><div class="line">        &lt;lst name=&quot;defaults&quot;&gt;</div><div class="line">            &lt;str name=&quot;spellcheck&quot;&gt;true&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;spellcheck.dictionary&quot;&gt;suggest&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;spellcheck.onlyMorePopular&quot;&gt;true&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;spellcheck.extendedResults&quot;&gt;false&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;spellcheck.count&quot;&gt;10&lt;/str&gt;</div><div class="line">            &lt;str name=&quot;spellcheck.collate&quot;&gt;true&lt;/str&gt;</div><div class="line">        &lt;/lst&gt;</div><div class="line">        &lt;arr name=&quot;components&quot;&gt;</div><div class="line">            &lt;str&gt;suggest&lt;/str&gt;</div><div class="line">        &lt;/arr&gt;</div><div class="line">    &lt;/requestHandler&gt;</div></pre></td></tr></table></figure>
-<p>&#x5728;&#x4E0A;&#x9762;&#x7528;&#x5230;&#x7684;&#x8054;&#x60F3;&#x6E90;&#xFF08;sourceLocation &#xFF09; &#x662F; dict.txt &#x4E2D;&#x7684;&#x8BCD;&#x7EC4;&#x3002;</p>
-<h3 id="&#x7136;&#x540E;&#x5728;schema-xml-&#x6309;&#x4F4D;&#x7F6E;&#x4F9D;&#x6B21;&#x6DFB;&#x52A0;&#xFF1A;"><a href="#&#x7136;&#x540E;&#x5728;schema-xml-&#x6309;&#x4F4D;&#x7F6E;&#x4F9D;&#x6B21;&#x6DFB;&#x52A0;&#xFF1A;" class="headerlink" title="&#x7136;&#x540E;&#x5728;schema.xml &#x6309;&#x4F4D;&#x7F6E;&#x4F9D;&#x6B21;&#x6DFB;&#x52A0;&#xFF1A;"></a>&#x7136;&#x540E;&#x5728;schema.xml &#x6309;&#x4F4D;&#x7F6E;&#x4F9D;&#x6B21;&#x6DFB;&#x52A0;&#xFF1A;</h3><p>&#x5148;&#x589E;&#x52A0;&#x4E00;&#x4E2A;&#x5B57;&#x6BB5;&#xFF1A;<br>&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x7684;&#x6587;&#x6863;&#x6709;&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#xFF1A;id&#x3001;name&#x3001;description&#x3002;&#x6211;&#x4EEC;&#x60F3;&#x7ED9;name&#x5B57;&#x6BB5;&#x505A;&#x81EA;&#x52A8;&#x8054;&#x60F3;&#x529F;&#x80FD;&#xFF0C;&#x7D22;&#x5F15;&#x914D;&#x7F6E;&#x5219;&#x4E3A;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;field name=&quot;id&quot; type=&quot;string&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;false&quot; required=&quot;true&quot;/&gt; </div><div class="line">&lt;field name=&quot;name&quot; type=&quot;text&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;false&quot; /&gt; </div><div class="line">&lt;field name=&quot;name_autocomplete&quot; type=&quot;text_auto&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;false&quot; /&gt; </div><div class="line">&lt;field name=&quot;description&quot; type=&quot;text&quot; indexed=&quot;true&quot; stored=&quot;true&quot; multiValued=&quot;false&quot; /&gt;</div></pre></td></tr></table></figure></p>
-<p>&#x6240;&#x4EE5; &#x6B64;&#x5904;&#x6211;&#x4EEC;company&#x5219;&#x5728;mc&#x7684;&#x5B57;&#x6BB5;&#x540E;&#x6DFB;&#x52A0;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;field name=&quot;suggestion&quot;      type=&quot;text_spell&quot;      indexed=&quot;true&quot;      stored=&quot;true&quot;      termVectors=&quot;true&quot; multiValued=&quot;true&quot; /&gt;</div></pre></td></tr></table></figure></p>
-<p>&#x53E6;&#x5916;&#xFF0C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;copyFiled&#xFF1A;</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;copyField source=&quot;mc&quot;  dest=&quot;suggestion&quot; /&gt;</div></pre></td></tr></table></figure>
-<p>&#x52A0;&#x5B8C;&#x4E4B;&#x540E; &#x6587;&#x4EF6;&#x957F;&#x8FD9;&#x6837;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">&lt;copyField source=&quot;gds&quot; dest=&quot;text&quot;/&gt;</div><div class="line">&lt;copyField source=&quot;mc&quot; dest=&quot;text&quot;/&gt;</div><div class="line">&lt;copyField source=&quot;mc&quot;  dest=&quot;suggestion&quot; /&gt;</div><div class="line">&lt;copyField source=&quot;jyfw&quot; dest=&quot;text&quot;/&gt;</div></pre></td></tr></table></figure></p>
-<p>&#x518D;&#x52A0;&#x4E00;&#x4E2A;type&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"> &lt;fieldType name=&quot;text_spell&quot; class=&quot;solr.TextField&quot;&gt;</div><div class="line">  &lt;analyzer type=&quot;index&quot;&gt;</div><div class="line">    &lt;tokenizer class=&quot;solr.StandardTokenizerFactory&quot;/&gt;</div><div class="line">    &lt;filter class=&quot;solr.LowerCaseFilterFactory&quot;/&gt;</div><div class="line">  &lt;/analyzer&gt;</div><div class="line">  &lt;analyzer type=&quot;query&quot;&gt;</div><div class="line">    &lt;tokenizer class=&quot;solr.StandardTokenizerFactory&quot;/&gt;</div><div class="line">    &lt;filter class=&quot;solr.LowerCaseFilterFactory&quot;/&gt;</div><div class="line">  &lt;/analyzer&gt;</div><div class="line">&lt;/fieldType&gt;</div></pre></td></tr></table></figure></p>
-<h2 id="&#x5DEE;&#x4E0D;&#x591A;&#x5C31;&#x662F;&#x8FD9;&#x4E9B;&#x4E86;&#x3002;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x5E76;&#x91CD;&#x542F;solr"><a href="#&#x5DEE;&#x4E0D;&#x591A;&#x5C31;&#x662F;&#x8FD9;&#x4E9B;&#x4E86;&#x3002;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x5E76;&#x91CD;&#x542F;solr" class="headerlink" title="&#x5DEE;&#x4E0D;&#x591A;&#x5C31;&#x662F;&#x8FD9;&#x4E9B;&#x4E86;&#x3002;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x5E76;&#x91CD;&#x542F;solr"></a>&#x5DEE;&#x4E0D;&#x591A;&#x5C31;&#x662F;&#x8FD9;&#x4E9B;&#x4E86;&#x3002;&#x4FDD;&#x5B58;&#x914D;&#x7F6E;&#x5E76;&#x91CD;&#x542F;solr</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">cd /solr-4.6.1/credit</div><div class="line">java -jar start.jar</div></pre></td></tr></table></figure>
-<h2 id="&#x6765;&#x5230;solr&#x7F51;&#x9875;&#x540E;&#xFF0C;&#x4F7F;&#x7528;&#x8BCD;&#x5178;&#x524D;-&#x5148;&#x6267;&#x884C;build&#x6307;&#x4EE4;&#xFF1A;"><a href="#&#x6765;&#x5230;solr&#x7F51;&#x9875;&#x540E;&#xFF0C;&#x4F7F;&#x7528;&#x8BCD;&#x5178;&#x524D;-&#x5148;&#x6267;&#x884C;build&#x6307;&#x4EE4;&#xFF1A;" class="headerlink" title="&#x6765;&#x5230;solr&#x7F51;&#x9875;&#x540E;&#xFF0C;&#x4F7F;&#x7528;&#x8BCD;&#x5178;&#x524D; &#x5148;&#x6267;&#x884C;build&#x6307;&#x4EE4;&#xFF1A;"></a>&#x6765;&#x5230;solr&#x7F51;&#x9875;&#x540E;&#xFF0C;&#x4F7F;&#x7528;&#x8BCD;&#x5178;&#x524D; &#x5148;&#x6267;&#x884C;build&#x6307;&#x4EE4;&#xFF1A;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/suggest?spellcheck.build=true</div></pre></td></tr></table></figure>
-<h2 id="&#x73B0;&#x5728;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E86;&#x3002;&#x4F7F;&#x7528;&#x8BCD;&#x7EC4;&#x7684;&#x5EFA;&#x8BAE;&#x65B9;&#x5F0F;&#xFF0C;&#x5047;&#x8BBE;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E3A;&#xFF1A;"><a href="#&#x73B0;&#x5728;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E86;&#x3002;&#x4F7F;&#x7528;&#x8BCD;&#x7EC4;&#x7684;&#x5EFA;&#x8BAE;&#x65B9;&#x5F0F;&#xFF0C;&#x5047;&#x8BBE;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E3A;&#xFF1A;" class="headerlink" title="&#x73B0;&#x5728;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E86;&#x3002;&#x4F7F;&#x7528;&#x8BCD;&#x7EC4;&#x7684;&#x5EFA;&#x8BAE;&#x65B9;&#x5F0F;&#xFF0C;&#x5047;&#x8BBE;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E3A;&#xFF1A;"></a>&#x73B0;&#x5728;&#x7EC8;&#x4E8E;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x7EC4;&#x4EF6;&#x4E86;&#x3002;&#x4F7F;&#x7528;&#x8BCD;&#x7EC4;&#x7684;&#x5EFA;&#x8BAE;&#x65B9;&#x5F0F;&#xFF0C;&#x5047;&#x8BBE;&#x67E5;&#x8BE2;&#x8BED;&#x53E5;&#x4E3A;&#xFF1A;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/suggest?q=&#x86E4;</div></pre></td></tr></table></figure>
-<h2 id="&#x5728;-solr-4-6-1-credit-solr-company-conf&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;dict-txt-&#x4E00;&#x884C;&#x884C;&#x5199;&#x8BCD;&#x7EC4;&#x586B;&#x5145;&#x8FD9;&#x4E2A;txt&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8054;&#x60F3;&#x7ED3;&#x679C;&#x4E86;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;"><a href="#&#x5728;-solr-4-6-1-credit-solr-company-conf&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;dict-txt-&#x4E00;&#x884C;&#x884C;&#x5199;&#x8BCD;&#x7EC4;&#x586B;&#x5145;&#x8FD9;&#x4E2A;txt&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8054;&#x60F3;&#x7ED3;&#x679C;&#x4E86;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;" class="headerlink" title="&#x5728;/solr-4.6.1/credit/solr/company/conf&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;dict.txt &#x4E00;&#x884C;&#x884C;&#x5199;&#x8BCD;&#x7EC4;&#x586B;&#x5145;&#x8FD9;&#x4E2A;txt&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8054;&#x60F3;&#x7ED3;&#x679C;&#x4E86;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;"></a>&#x5728;/solr-4.6.1/credit/solr/company/conf&#x4E0B;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;dict.txt &#x4E00;&#x884C;&#x884C;&#x5199;&#x8BCD;&#x7EC4;&#x586B;&#x5145;&#x8FD9;&#x4E2A;txt&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x8054;&#x60F3;&#x7ED3;&#x679C;&#x4E86;&#xFF0C;&#x5982;&#x56FE;&#xFF1A;</h2><p><img src="/2016/12/10/Solr-4-6-&#x914D;&#x7F6E;&#x8054;&#x60F3;&#x8BCD;&#x529F;&#x80FD;/solr.jpg" alt="logo"></p>
+		<p>&#x5929;&#x5929;&#x96FE;&#x973E;&#x7684;&#x5317;&#x4EAC;&#x8BA9;&#x4EBA;&#x5934;&#x75BC;&#xFF0C;&#x5199;&#x4E86;&#x4E24;&#x4E2A;&#x722C;&#x866B;&#x6765;&#x663E;&#x793A;&#x5317;&#x4EAC;&#x548C;&#x5168;&#x56FD;&#x7684;&#x6C61;&#x67D3;&#x60C5;&#x51B5;&#xFF0C;&#x804A;&#x4EE5;&#x81EA;&#x6170;</p>
+<h2 id="&#x722C;&#x53D6;&#x5317;&#x4EAC;&#x7684;AQI"><a href="#&#x722C;&#x53D6;&#x5317;&#x4EAC;&#x7684;AQI" class="headerlink" title="&#x722C;&#x53D6;&#x5317;&#x4EAC;&#x7684;AQI"></a>&#x722C;&#x53D6;&#x5317;&#x4EAC;&#x7684;AQI</h2><p>&#x57FA;&#x4E8E;requests&#x548C;bs4&#xFF0C;&#x53EF;&#x4EE5;&#x5FEB;&#x901F;&#x722C;&#x53D6;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x7F51;&#x7AD9;&#x7684;AQI&#x6570;&#x636E;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">import requests</div><div class="line">from bs4 import BeautifulSoup</div><div class="line"></div><div class="line">headers = {&apos;User-Agent&apos;: &apos;Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.1 (KHTML, like Gecko) Chrome/22.0.1207.1 Safari/537.1&apos;}</div><div class="line"></div><div class="line">r = requests.get(&apos;http://www.pm25.com/beijing.html&apos;, headers=headers)</div><div class="line">soup = BeautifulSoup(r.content, &apos;lxml&apos;)</div><div class="line">print &apos;pm25:&apos;,soup.find(&apos;a&apos;, class_ = &quot;bi_aqiarea_num&quot;).get_text()</div><div class="line"></div><div class="line">r = requests.get(&apos;http://aqicn.org/city/beijing&apos;, headers=headers)</div><div class="line">soup = BeautifulSoup(r.content, &apos;lxml&apos;)</div><div class="line">print &apos;aqicn:&apos;,soup.find(id=&quot;aqiwgtvalue&quot;).get_text()</div></pre></td></tr></table></figure>
+<p>&#x5176;&#x4E2D;&#xFF0C;&#x7B2C;&#x4E8C;&#x4E2A;&#x7F51;&#x7AD9;&#x5982;&#x679C;&#x5728;&#x8BBF;&#x95EE;&#x7684;&#x65F6;&#x5019;&#x4E0D;&#x52A0;&#x4E0A;header&#xFF0C;&#x5C31;&#x4F1A;&#x88AB;&#x62D0;&#x8FDB;&#x53BB;&#x4E00;&#x4E2A;&#x5047;&#x7F51;&#x7AD9;&#xFF0C;&#x5F97;&#x5230;&#x4E00;&#x4E2A;&#x79BB;&#x5947;&#x7684;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="&#x722C;&#x53D6;&#x5168;&#x56FD;&#x7A7A;&#x6C14;&#x8D28;&#x91CF;&#x56FE;"><a href="#&#x722C;&#x53D6;&#x5168;&#x56FD;&#x7A7A;&#x6C14;&#x8D28;&#x91CF;&#x56FE;" class="headerlink" title="&#x722C;&#x53D6;&#x5168;&#x56FD;&#x7A7A;&#x6C14;&#x8D28;&#x91CF;&#x56FE;"></a>&#x722C;&#x53D6;&#x5168;&#x56FD;&#x7A7A;&#x6C14;&#x8D28;&#x91CF;&#x56FE;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python</div><div class="line"># -*- coding: UTF-8 -*-</div><div class="line"></div><div class="line">from bs4 import BeautifulSoup</div><div class="line">import re</div><div class="line">import urllib</div><div class="line">import time</div><div class="line"></div><div class="line">airUrl = &quot;http://air-level.com/&quot;</div><div class="line">classPattern = &quot;img-thumbnail&quot;</div><div class="line"></div><div class="line">#&#x8BBE;&#x7F6E;&#x5B58;&#x50A8;&#x4F4D;&#x7F6E;</div><div class="line">savePath = &quot;~/Desktop/&quot;</div><div class="line"></div><div class="line"></div><div class="line">def download_img(url,imgName):</div><div class="line">    &quot;&quot;&quot;</div><div class="line">    download a comic in the form of</div><div class="line">    url = http://www.example.com</div><div class="line">    imgName = &apos;00000000.jpg&apos;</div><div class="line">    &quot;&quot;&quot;</div><div class="line">    image=urllib.URLopener()</div><div class="line">    image.retrieve(url,imgName.decode(&apos;utf-8&apos;))</div><div class="line"></div><div class="line">data = urllib.urlopen(airUrl).read()</div><div class="line">soup = BeautifulSoup(data, &quot;html5lib&quot;, from_encoding=&quot;utf-8&quot;)</div><div class="line">imgSrc = soup.find(&apos;img&apos;, {&quot;class&quot;:classPattern}).get(&apos;src&apos;)</div><div class="line">updateTime = re.findall(r&apos;\s(2.*)&apos;, soup.find(&apos;h4&apos;).contents[0].encode(&apos;utf-8&apos;))</div><div class="line">fileName = &apos;/Users/liujinjian/Desktop/&apos; + str(int(time.time())) + &apos;air.png&apos;</div><div class="line">download_img(imgSrc, fileName)</div></pre></td></tr></table></figure>
+<p>&#x53EF;&#x4EE5;&#x5F97;&#x5230;&#x5982;&#x4E0B;&#x56FE;&#x7247;&#xFF1A;</p>
+<p><img src="/2017/01/05/&#x5173;&#x4E8E;&#x96FE;&#x973E;aqi&#x7684;&#x5C0F;&#x722C;&#x866B;/air.png" alt="logo"></p>
+<p>&#x5982;&#x679C;&#x662F;Linux&#x7CFB;&#x7EDF;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x914D;&#x5408;crontab&#x529F;&#x80FD;&#x6765;&#x5B9A;&#x65F6;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x811A;&#x672C;&#xFF0C;&#x83B7;&#x5F97;&#x6BCF;&#x9694;&#x4E00;&#x6BB5;&#x65F6;&#x95F4;&#x7684;&#x6C61;&#x67D3;&#x60C5;&#x51B5;&#x3002;</p>
 
 	
 	
@@ -378,9 +371,9 @@
 <div id="comments">
     <!-- 多说评论框 start -->
         <div class="ds-thread" 
-            data-thread-key="2016/12/10/Solr-4-6-配置联想词功能/" 
-            data-url="http://www.bububupt.com/2016/12/10/Solr-4-6-配置联想词功能/"
-            data-title="Solr 4.6 配置联想词功能"></div>
+            data-thread-key="2017/01/05/关于雾霾aqi的小爬虫/" 
+            data-url="http://www.bububupt.com/2017/01/05/关于雾霾aqi的小爬虫/"
+            data-title="关于雾霾aqi的小爬虫"></div>
     <!-- 多说评论框 end -->
 </div>
 
@@ -393,21 +386,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/12/11/Crontab定时/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2016/12/10/Ansible-python-api远程部署/" id="post_nav-older" class="next-content">
+        <a href="/2016/12/29/mac上的pip-换源/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">

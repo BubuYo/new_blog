@@ -4,7 +4,7 @@
     <!-- Title -->
     
     <title>
-        Ansible python api远程部署 | 卜将就
+        使用Python-docx生成Word文件 | 卜将就
     </title>
     
     <!-- Favicons -->
@@ -40,7 +40,7 @@
     <!-- The Open Graph protocol -->
     <meta property="og:url" content="http://www.bububupt.com">
     <meta property="og:type" content="blog">
-    <meta property="og:title" content="Ansible python api远程部署 | 卜将就">
+    <meta property="og:title" content="使用Python-docx生成Word文件 | 卜将就">
     <meta property="og:description" content="北邮学子，专注Python爬虫爬坑中，坐标帝都。">
     
      <!--[if lte IE 9]>
@@ -215,7 +215,7 @@
 	<ul class="post-toc-wrap mdl-menu mdl-menu--bottom-left mdl-js-menu mdl-js-ripple-effect"
 		for="post-toc-trigger-btn">
 			
-			<ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#目标：MasterA机器通过python脚本-控制ansible-playbook-实现远程部署"><span class="post-toc-number">1.</span> <span class="post-toc-text">目标：MasterA机器通过python脚本 控制ansible playbook 实现远程部署</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#在MasterA机器上："><span class="post-toc-number">1.1.</span> <span class="post-toc-text">在MasterA机器上：</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#ls-yml"><span class="post-toc-number">1.2.</span> <span class="post-toc-text">ls.yml</span></a></li></ol></li></ol>
+			<ol class="post-toc"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#准备工作"><span class="post-toc-number">1.</span> <span class="post-toc-text">准备工作</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#demo"><span class="post-toc-number">2.</span> <span class="post-toc-text">demo</span></a></li></ol>
 		
 <!--			<li class="mdl-menu__item">Some Action</li>-->
 	</ul>
@@ -248,7 +248,7 @@
 		
 	
         <p class="article-headline-p">
-            Ansible python api远程部署
+            使用Python-docx生成Word文件
         </p>
     </div>
 
@@ -266,7 +266,7 @@
     <!-- Author Name & Date -->
     <div>
         <strong>Bubu</strong>
-        <span>12月 10, 2016</span>
+        <span>2月 12, 2017</span>
     </div>
     
     <div class="section-spacer"></div>
@@ -310,21 +310,21 @@
     
     
     <!-- Share Twitter -->
-    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=Ansible python api远程部署&url=http://www.bububupt.com//2016/12/10/Ansible-python-api远程部署/index.html&via=Bubu" target="_blank">
+    <a class="post_share-link" href="https://twitter.com/intent/tweet?text=使用Python-docx生成Word文件&url=http://www.bububupt.com//2017/02/12/使用Python-docx生成Word文件/index.html&via=Bubu" target="_blank">
         <li class="mdl-menu__item">
             分享到 Twitter
         </li>
     </a>
     
     <!-- Share Google+ -->
-    <a class="post_share-link" href="https://plus.google.com/share?url=http://www.bububupt.com//2016/12/10/Ansible-python-api远程部署/index.html" target="_blank">
+    <a class="post_share-link" href="https://plus.google.com/share?url=http://www.bububupt.com//2017/02/12/使用Python-docx生成Word文件/index.html" target="_blank">
         <li class="mdl-menu__item">
             分享到 Google+
         </li>
     </a>
     
     <!-- Share Weibo -->
-    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=Ansible python api远程部署&url=http://www.bububupt.com//2016/12/10/Ansible-python-api远程部署/index.html&pic=&searchPic=false&style=simple" target="_blank">
+    <a class="post_share-link" href="http://service.weibo.com/share/share.php?appkey=&title=使用Python-docx生成Word文件&url=http://www.bububupt.com//2017/02/12/使用Python-docx生成Word文件/index.html&pic=&searchPic=false&style=simple" target="_blank">
         <li class="mdl-menu__item">
             分享到微博
         </li>
@@ -336,20 +336,12 @@
                 <!-- Post Content -->
                 <div id="post-content" class="markdown-Github mdl-color-text--grey-700 mdl-card__supporting-text fade out">
 	
-		<h1 id="&#x76EE;&#x6807;&#xFF1A;MasterA&#x673A;&#x5668;&#x901A;&#x8FC7;python&#x811A;&#x672C;-&#x63A7;&#x5236;ansible-playbook-&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x90E8;&#x7F72;"><a href="#&#x76EE;&#x6807;&#xFF1A;MasterA&#x673A;&#x5668;&#x901A;&#x8FC7;python&#x811A;&#x672C;-&#x63A7;&#x5236;ansible-playbook-&#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x90E8;&#x7F72;" class="headerlink" title="&#x76EE;&#x6807;&#xFF1A;MasterA&#x673A;&#x5668;&#x901A;&#x8FC7;python&#x811A;&#x672C; &#x63A7;&#x5236;ansible playbook &#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x90E8;&#x7F72;"></a>&#x76EE;&#x6807;&#xFF1A;MasterA&#x673A;&#x5668;&#x901A;&#x8FC7;python&#x811A;&#x672C; &#x63A7;&#x5236;ansible playbook &#x5B9E;&#x73B0;&#x8FDC;&#x7A0B;&#x90E8;&#x7F72;</h1><h2 id="&#x5728;MasterA&#x673A;&#x5668;&#x4E0A;&#xFF1A;"><a href="#&#x5728;MasterA&#x673A;&#x5668;&#x4E0A;&#xFF1A;" class="headerlink" title="&#x5728;MasterA&#x673A;&#x5668;&#x4E0A;&#xFF1A;"></a>&#x5728;MasterA&#x673A;&#x5668;&#x4E0A;&#xFF1A;</h2><p>&#x521B;&#x5EFA;python&#x7A0B;&#x5E8F;&#xFF1A; run_playbook.py</p>
-<p>&#x5B9E;&#x73B0;&#x529F;&#x80FD;&#xFF1A;&#x8FD0;&#x884C;&#x4E00;&#x4E2A;&#x672C;&#x673A;&#x4E0A;&#x6307;&#x5B9A;&#x7684;playbook<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/env python</div><div class="line">import os</div><div class="line">import sys</div><div class="line">from collections import namedtuple</div><div class="line">from ansible.parsing.dataloader import DataLoader</div><div class="line">from ansible.vars import VariableManager</div><div class="line">from ansible.inventory import Inventory</div><div class="line">from ansible.executor.playbook_executor import PlaybookExecutor</div><div class="line"></div><div class="line">variable_manager = VariableManager()</div><div class="line">loader = DataLoader()</div><div class="line"></div><div class="line">inventory = Inventory(loader=loader, variable_manager=variable_manager,  host_list=&apos;/etc/ansible/hosts&apos;)</div><div class="line">playbook_path = &apos;/home/bubu/ls.yml&apos;</div><div class="line"></div><div class="line">if not os.path.exists(playbook_path):</div><div class="line">    print &apos;[INFO] The playbook does not exist&apos;</div><div class="line">    sys.exit()</div><div class="line"></div><div class="line">Options = namedtuple(&apos;Options&apos;, [&apos;listtags&apos;, &apos;listtasks&apos;, &apos;listhosts&apos;, &apos;syntax&apos;, &apos;connection&apos;,&apos;module_path&apos;, &apos;forks&apos;, &apos;private_key_file&apos;, &apos;ssh_common_args&apos;, &apos;ssh_extra_args&apos;, &apos;sftp_extra_args&apos;, &apos;scp_extra_args&apos;, &apos;become&apos;, &apos;become_method&apos;, &apos;become_user&apos;, &apos;verbosity&apos;, &apos;check&apos;])</div><div class="line">options = Options(listtags=False, listtasks=False, listhosts=False, syntax=False, connection=&apos;ssh&apos;, module_path=None, forks=100, private_key_file=None, ssh_common_args=None, ssh_extra_args=None, sftp_extra_args=None, scp_extra_args=None, become=True, become_method=None, become_user=&apos;root&apos;, verbosity=None, check=False)</div><div class="line"></div><div class="line">variable_manager.extra_vars = {&apos;hosts&apos;: &apos;dbserver&apos;} # This can accomodate various other command line arguments.`</div><div class="line"></div><div class="line">passwords = {}</div><div class="line"></div><div class="line">pbex = PlaybookExecutor(playbooks=[playbook_path], inventory=inventory, variable_manager=variable_manager, loader=loader, options=options, passwords=passwords)</div><div class="line"></div><div class="line">results = pbex.run()</div></pre></td></tr></table></figure></p>
-<p>&#x7A0B;&#x5E8F;&#x4E2D;&#x6253;&#x5F00;&#x7684;playbook&#x4F4D;&#x7F6E;&#x662F;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">playbook_path = &apos;/home/bubu/ls.yml&apos;</div></pre></td></tr></table></figure></p>
-<p>&#x6240;&#x4EE5;&#x5728;&#x90A3;&#x91CC;&#x5E94;&#x6709;&#x5BF9;&#x5E94;&#x7684;playbook: ls.yml.</p>
-<h2 id="ls-yml"><a href="#ls-yml" class="headerlink" title="ls.yml"></a>ls.yml</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">- hosts: dbservers</div><div class="line">  sudo: yes</div><div class="line"></div><div class="line">  tasks:</div><div class="line">  - name: Copy file</div><div class="line">    copy: src=/home/bubu/mk_txt.py dest=/home/bubu/mk_txt.py mode=755</div><div class="line">  - name: Execute script</div><div class="line">    command: /home/bubu/mk_txt.py</div></pre></td></tr></table></figure>
-<p>&#x8BE5;playbook&#x5B9E;&#x73B0;&#x4E00;&#x4E2A;&#x5F88;&#x7B80;&#x5355;&#x7684;&#x529F;&#x80FD;&#xFF1A;&#x4E0A;&#x4F20;mk_txt.py&#x5230;&#x8FDC;&#x7A0B;&#x673A;&#x5668;SlaveB&#x7684;&#x6307;&#x5B9A;&#x4F4D;&#x7F6E;&#xFF0C;&#x5E76;&#x6267;&#x884C;&#x5B83;&#x3002;</p>
-<p>&#x5982;&#x679C;copy&#x65F6; &#x6CA1;&#x6709;&#x628A;&#x6743;&#x9650;&#x63D0;&#x9AD8;&#x5230;755 &#x7B2C;&#x4E8C;&#x6B65;&#x7684;&#x6267;&#x884C;&#x5C31;&#x4F1A;&#x51FA;&#x9519;&#x3002;&#x56E0;&#x4E3A;&#x8981;&#x751F;&#x6210;&#x7684;TXT&#x5728; /root &#x76EE;&#x5F55;&#x4E0B;&#x3002;&#xFF08;&#x53EF;&#x80FD;&#x662F;sudo&#xFF1A;yes &#x5BFC;&#x81F4;&#x5B83;&#x5B9A;&#x4F4D;&#x5230;&#x4E86;&#x9ED8;&#x8BA4;&#x7684; /root &#x4E0B;</p>
-<p>&#x4E0A;&#x4F20;&#x7684;mk_txt.py&#x53EF;&#x4EE5;&#x751F;&#x6210;&#x4E00;&#x4E2A;2.txt&#x3002;</p>
-<p>mk_txt.py&#x5185;&#x5BB9;&#x662F;&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#!/usr/bin/python</div><div class="line">import os</div><div class="line"></div><div class="line">file = open(&apos;2.txt&apos;,&apos;w&apos;)</div><div class="line"></div><div class="line">file.write(&quot;\nbubu&quot;)</div></pre></td></tr></table></figure></p>
-<p>&#x7136;&#x540E;&#x6211;&#x4EEC;&#x542F;&#x52A8;ansible&#xFF1A;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">source ./hacking/env-setup</div></pre></td></tr></table></figure></p>
-<p>&#x63A5;&#x7740;&#x8FD0;&#x884C; run_playbook.py &#x5373;&#x53EF;&#x3002;</p>
-<p>&#x5B8C;&#x6210;&#x3002;</p>
-<p>&#x6B64;&#x65F6;&#x53BB;SlaveB &#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5DF2;&#x4E0A;&#x4F20;&#x7684;python&#x7A0B;&#x5E8F; mk_txt.py &#x548C;&#x6267;&#x884C;&#x540E;&#x7684; 2.txt&#xFF1A;</p>
-<p>Ps:&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x751F;&#x6210;&#x4E0A;&#x9762;playbook&#x7684;python&#x7A0B;&#x5E8F;&#xFF1A;wyml.py<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">import yaml</div><div class="line"></div><div class="line">file = open(&apos;lss.yml&apos;, &apos;w&apos;)</div><div class="line">#as ymlfile:</div><div class="line">#   cfg = yaml.load(ymlfile)</div><div class="line">#hosts = {&apos;hosts&apos;: &apos;dbservers&apos;, &apos;tasks&apos;: [{&apos;copy&apos;: &apos;src=/home/bubu/mk_txt.py dest=/home/bubu/mk_txt.py mode=755&apos;, &apos;name&apos;: &apos;Copy file&apos;}</div><div class="line">file.write(&quot;---\n- hosts: dbservers\n  sudo: yes\n\n  tasks:\n  - name: Copy file\n    copy: src=/home/bubu/mk_txt.py dest=/home/bubu/mk_txt.py mode=755\n  - name:Execute script\n    command:/home/bubu/mk_txt.py&quot;)</div></pre></td></tr></table></figure></p>
+		<h2 id="&#x51C6;&#x5907;&#x5DE5;&#x4F5C;"><a href="#&#x51C6;&#x5907;&#x5DE5;&#x4F5C;" class="headerlink" title="&#x51C6;&#x5907;&#x5DE5;&#x4F5C;"></a>&#x51C6;&#x5907;&#x5DE5;&#x4F5C;</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip3 install python-docx</div></pre></td></tr></table></figure>
+<p>&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x81EA;&#x52A8;&#x5B89;&#x88C5;lxml&#x4F9D;&#x8D56;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">liujinjian@localhost:~/Downloads$ pip3 install python-docx</div><div class="line">100% |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 5.3MB 148kB/s</div><div class="line">Collecting lxml&gt;=2.3.2 (from python-docx)</div><div class="line">  Downloading http://pypi.doubanio.com/packages/66/45/f11fc376f784c6f2e77ffc7a9d02374ff3ceb07ede8c56f918939409577c/lxml-3.7.2.tar.gz (3.8MB)</div><div class="line">Collecting python-docx</div><div class="line">  Downloading http://pypi.doubanio.com/packages/2e/07/6a89e91c4fa32f074b77a05564e926420b28e5966ee0fc2a1983805acb3c/python-docx-0.8.6.tar.gz (5.3MB)</div><div class="line">  100% |&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;&#x2588;| 3.8MB 92kB/s</div><div class="line">Building wheels for collected packages: python-docx, lxml</div><div class="line">  Running setup.py bdist_wheel for python-docx ... done</div><div class="line">  Stored in directory: /Users/liujinjian/Library/Caches/pip/wheels/c3/ba/c1/900edf20f250e74e4307e9a1bbec9caa11216201d31184b8a1</div><div class="line">  Running setup.py bdist_wheel for lxml ... done</div><div class="line">  Stored in directory: /Users/liujinjian/Library/Caches/pip/wheels/da/3c/16/d89ee1ffd21e49a7938036fa3c9000d2f6b265d7c651fd3244</div><div class="line">Successfully built python-docx lxml</div><div class="line">Installing collected packages: lxml, python-docx</div><div class="line">Successfully installed lxml-3.7.2 python-docx-0.8.6</div></pre></td></tr></table></figure>
+<h2 id="demo"><a href="#demo" class="headerlink" title="demo"></a>demo</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line">from docx import Document</div><div class="line">from docx.shared import Inches</div><div class="line"></div><div class="line">document = Document()</div><div class="line"></div><div class="line">document.add_heading(&apos;&#x6587;&#x6863;&#x6807;&#x9898;&apos;, 0)</div><div class="line"></div><div class="line">p = document.add_paragraph(&apos;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x81EA;&#x7136;&#x6BB5; &apos;)</div><div class="line">p.add_run(&apos;bold&apos;).bold = True</div><div class="line">p.add_run(&apos; &#x8FD8;&#x6709; &apos;)</div><div class="line">p.add_run(&apos;italic.&apos;).italic = True</div><div class="line"></div><div class="line">document.add_heading(&apos;1&#x7EA7;&#x522B;&#x6807;&#x9898;&apos;, level=1)</div><div class="line">document.add_paragraph(&apos;&#x5F15;&#x7528;&apos;, style=&apos;IntenseQuote&apos;)</div><div class="line"></div><div class="line">document.add_paragraph(</div><div class="line">    &apos;&#x7B26;&#x53F7;&#x5217;&#x8868;&apos;, style=&apos;ListBullet&apos;</div><div class="line">)</div><div class="line">document.add_paragraph(</div><div class="line">    &apos;&#x6570;&#x5B57;&#x5217;&#x8868;t&apos;, style=&apos;ListNumber&apos;</div><div class="line">)</div><div class="line"></div><div class="line">document.add_paragraph(&apos;&#x914D;&#x56FE;:&apos;)</div><div class="line">document.add_picture(&apos;/Users/liujinjian/Downloads/8Mjpg.jpg&apos;, width=Inches(3.25))</div><div class="line"></div><div class="line">table = document.add_table(rows=3, cols=3)</div><div class="line">hdr_cells = table.rows[0].cells</div><div class="line">hdr_cells[0].text = &apos;&#x7B2C;&#x4E00;&#x5217;&apos;</div><div class="line">hdr_cells[1].text = &apos;&#x7B2C;&#x4E8C;&#x5217;&apos;</div><div class="line">hdr_cells[2].text = &apos;&#x7B2C;&#x4E09;&#x5217;&apos;</div><div class="line"></div><div class="line">hdr_cells = table.rows[1].cells</div><div class="line">hdr_cells[0].text = &apos;1&apos;</div><div class="line">hdr_cells[1].text = &apos;21&apos;</div><div class="line">hdr_cells[2].text = &apos;qwertyuiop&apos;</div><div class="line"></div><div class="line">hdr_cells = table.rows[2].cells</div><div class="line">hdr_cells[0].text = &apos;2&apos;</div><div class="line">hdr_cells[1].text = &apos;43&apos;</div><div class="line">hdr_cells[2].text = &apos;asdfghjkl&apos;</div><div class="line"></div><div class="line">document.add_page_break()</div><div class="line"></div><div class="line">document.save(&apos;demo.docx&apos;)</div></pre></td></tr></table></figure>
+<p>&#x6548;&#x679C;&#x56FE;&#xFF1A;</p>
+<p><img src="/2017/02/12/&#x4F7F;&#x7528;Python-docx&#x751F;&#x6210;Word&#x6587;&#x4EF6;/1.png" alt="img"></p>
 
 	
 	
@@ -377,9 +369,9 @@
 <div id="comments">
     <!-- 多说评论框 start -->
         <div class="ds-thread" 
-            data-thread-key="2016/12/10/Ansible-python-api远程部署/" 
-            data-url="http://www.bububupt.com/2016/12/10/Ansible-python-api远程部署/"
-            data-title="Ansible python api远程部署"></div>
+            data-thread-key="2017/02/12/使用Python-docx生成Word文件/" 
+            data-url="http://www.bububupt.com/2017/02/12/使用Python-docx生成Word文件/"
+            data-title="使用Python-docx生成Word文件"></div>
     <!-- 多说评论框 end -->
 </div>
 
@@ -392,21 +384,13 @@
     
     <!-- Prev Nav -->
     
-        <a href="/2016/12/10/Solr-4-6-配置联想词功能/" id="post_nav-newer" class="prev-content">
-            <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_back</i>
-            </button>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            新篇
-        </a>
-    
 
     <!-- Section Spacer -->
     <div class="section-spacer"></div>
 
     <!-- Next Nav -->
     
-        <a href="/2016/12/10/Install-DCOS-on-CentOS/" id="post_nav-older" class="next-content">
+        <a href="/2017/02/07/Python提取文本关键词制作图云/" id="post_nav-older" class="next-content">
             旧篇
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
